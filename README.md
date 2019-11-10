@@ -1,5 +1,11 @@
 ## INFOGLOBO TEST
 
+## Exemplo em produção
+* http://67.205.133.173:3001/login
+Para acessar o sistema entre com as seguintes credenciais:
+email: admin@admin.com
+senha: 123mudar
+
 ## Visão Geral
 * API REST
 * Node
@@ -13,6 +19,7 @@
 ## Requisitos
 * Node
 * MongoDB
+* Docker
 
 ## Informações Gerais
 * O backend se encontra neste link: [backend](https://github.com/abraaoduarte/infoglobo-test/tree/master/backend)
@@ -27,6 +34,13 @@ Entre no diretório
 ```
 $ cd infoglobo-test
 ```
+É necessário ter o Docker instalado em sua máquina caso você não queira instalar o mongodb em sua máquina.
+Após a instalação e estar com o serviço do Docker rodando, execute:
+```
+$ docker-compose up
+```
+O MongoDB está rodando no docker
+
 Entre na pasta backend e crie o arquivo .env e coloque as variáveis de ambiente
 ```
 $ cd backend
@@ -41,7 +55,7 @@ JWT_SECRET=1234
 ```
 Rode a seeder para criar um usuário default
 ```
-$  yarn md-seed run
+$  yarn md-seed run ou yarn run:seeder
 ```
 Entre na pasta frontend e crie o arquivo .env e coloque as variáveis de ambiente
 ```
@@ -61,12 +75,7 @@ Entra na raiz do projeto e inicie os projetos
 ```
 $ yarn start
 ```
-## Instalação com Docker
-É necessário ter o Docker instalado em sua máquina.
-Após a instalação e estar com o serviço do Docker rodando, execute:
-```
-$ docker-compose up
-```
+
 Após isso a API estará rodando em http://localhost/3000 caso seja esta a porta que você tenha configurado no .env
 O Frontend estará rodando em http://localhost/3001 caso seja esta a porta que você tenha configurado no .env
 

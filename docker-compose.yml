@@ -1,18 +1,6 @@
 version: '3'
 
 services:
-  backend:
-    build: ./backend
-    command: yarn start
-    ports:
-      - '3000:3000'
-    depends_on:
-      - mongodb
-    links:
-      - mongodb
-    volumes:
-      - ./backend/:/usr/app/
-
   mongodb:
     image: 'mongo'
     container_name: mongo
