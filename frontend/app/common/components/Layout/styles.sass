@@ -1,0 +1,46 @@
+.Layout
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  &__content
+    min-height: calc(100% - 72px)
+    padding: 24px
+  &__footer
+    width: 100%
+    background: #fff
+    text-align: center
+    min-height: 72px
+  &__breadcrumb
+    margin-bottom: 15px
+  &__menu
+    line-height: 45px
+    > .ant-menu-item.Layout__menu-item-right,
+    > .ant-menu-submenu.Layout__menu-item-right,
+      float: right
+  &__menu-item-right,
+    float: right
+  &__header
+    height: 45px
+  .ant-table-pagination
+    margin-right: 16px !important
+
+.container
+  height: 100vh
+  flex: 1
+  width: calc(100% - 256px)
+  overflow-y: scroll
+  overflow-x: hidden
+
+@media (max-width: 767px)
+  .container
+    height: 100vh
+    flex: 1
+    width: 100%
+
+.Layout
+  @media (max-width: 767px)
+    &__content
+      padding: 12px
+    &__backTop
+      right: 20px
+      bottom: 20px

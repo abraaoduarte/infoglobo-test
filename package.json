@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "infoglobo-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start:backend:dev": "yarn workspace backend start:dev",
+    "start:backend": "yarn workspace backend start",
+    "start:frontend": "yarn workspace frontend start",
+    "seeder": "npm run --prefix backend run:seeder",
+    "start:dev": "concurrently --kill-others-on-fail \"yarn start:backend:dev\" \"yarn start:frontend\"",
+    "start": "concurrently --kill-others-on-fail \"yarn start:backend\" \"yarn start:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  }
+}
