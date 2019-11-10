@@ -3,8 +3,8 @@
 ## Exemplo em produção
 * http://67.205.133.173:3001/login
 Para acessar o sistema entre com as seguintes credenciais:
-email: admin@admin.com
-senha: 123mudar
+* email: admin@admin.com
+* senha: 123mudar
 
 ## Visão Geral
 * API REST
