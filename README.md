@@ -91,7 +91,7 @@ Exemplo do retorno:
   }
 }
 ```
-Copie o token gerado para acessar as outras API's e passe no header da seguitne maneira:
+Copie o token gerado para acessar as outras API's e passe no header da seguinte maneira:
 ```
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzQ1OTU3NDEsImlhdCI6MTU3MzM4NjE0MSwic3ViIjp7ImlkIjoiNWRjNGNiMDYwMzM0NDMzZTg1MGNhMWUyIn19.1v3AcHsu5qAOyAVe98ID_Yop4pf3kaxvz7MVUzRmNyc
 ```
