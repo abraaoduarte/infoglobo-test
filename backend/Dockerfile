@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:12-alpine
 
 WORKDIR /usr/app
 
@@ -6,12 +6,12 @@ COPY package*.json ./
 
 RUN apk add --no-cache make gcc g++ python
 
-RUN npm install
+RUN npm install -g yarn
+
+RUN yarn install --network-timeout 1000000
 
 COPY . .
 
-RUN echo "Based on commit:"
-
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
